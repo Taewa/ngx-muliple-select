@@ -1,0 +1,14 @@
+<section class="dropdown-area" [ngStyle]="dropDownAreaStyle()">
+
+    <button
+            type="button"
+            (click)="toggleOpen()"
+            class="btn-toggle"
+            [ngClass]="{'opened' : opened}">
+            <i class="arrow up"></i>
+    </button>
+
+    <div *ngIf="opened" [@slideUpDownAnim]  class="menu-list font-gotham-light">
+        <ng-content select="[menu-list]"></ng-content>
+    </div>
+</section>

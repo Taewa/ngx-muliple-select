@@ -1,0 +1,43 @@
+:host{
+    width: 220px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    display: inline-block;
+    position: relative;
+}
+
+//Deep shadow selector. :host /deep/ SELECTOR
+:host /deep/ .menu-list-cover{
+    padding: 21px 5px;
+    margin: 0 20px;
+    font-size: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e1e1e1;
+    cursor: pointer;
+}
+
+
+.btn-toggle{
+    position: absolute;
+    padding: 4px;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    transition: all 0.18s ease-out;
+
+    &.opened{
+        transform: rotate(180deg);
+    }
+}
+
+.arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+
+    &.up{
+        transform: rotate(-135deg);
+    }
+}

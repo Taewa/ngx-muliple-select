@@ -1,0 +1,26 @@
+<div class="input-area" (click)="toggleMenu()" [title]="selectedText.toString()">
+    <input
+            type="text"
+            class="display"
+            [placeholder]="placeholder"
+            [disabled]="disabled"
+            readonly>
+    <span class="icon icon-arrow-down-black"></span>
+</div>
+
+<dropdown #multiDropdown [ngClass]="{'dropdown-hidden' : !opened}" [isMaxHeight]="true" (closed)="dropdownClosed()">
+    <div
+        menu-list
+        class="menu-list-cover"
+        *ngFor="let item of data; let i = index">
+
+        <label>
+            <input type="checkbox" (change)="checked()" [attr.data-pair-id]="item.id" #checkbox>
+            <span class="menu-name" (click)="checked()">{{item.text}}</span>
+        </label>
+    </div>
+</dropdown>
+
+<div class="dim" *ngIf="opened" (click)="closeMenu()"></div>
+
+

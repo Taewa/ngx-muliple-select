@@ -1,0 +1,74 @@
+:host{
+    position: relative;
+}
+
+.display{
+    min-width: 178px;
+    font-size: 11px;
+    padding: 13px 30px 12px 15px;
+
+    &::placeholder{
+        font-size: 14px;
+    }
+
+    &:read-only{
+        background: #fff;
+    }
+
+    &:disabled{
+        background: #eceeef;
+    }
+}
+
+.input-area{
+    display: inline-block;
+    position: relative;
+
+    .icon{
+        position: absolute;
+        top: 15px;
+        right: 13px;
+    }
+}
+
+.dropdown-hidden{
+    visibility: hidden;
+}
+
+dropdown{
+    width: 100%;
+    position: absolute;
+    top: -11px;
+    left: 0;
+    z-index: 20;
+}
+
+
+dropdown /deep/ .menu-list-cover{
+    position: relative;
+    padding: 16px 5px;
+    text-align: left;
+    border-bottom:none;
+
+    input[type="checkbox"]{
+        position: absolute;
+    }
+
+    .menu-name{
+        font-size: 15px;
+        display: block;
+        margin-left: 24px;
+        word-break: break-all;
+    }
+}
+
+.dim{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 10;
+
+}
